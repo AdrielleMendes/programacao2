@@ -1,0 +1,179 @@
+
+
+
+//testei cada um no vscode separadamente 
+
+
+
+
+
+
+//Desenvolva um algoritmo em Java que leia um número inteiro do
+//terminal e imprima:
+
+//• o dobro desse número;
+//o triplo desse número.
+import java.util.Scanner;
+
+public class projeto{
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+
+        System.out.print("Digite um número inteiro: ");
+        int numero = leitor.nextInt();
+
+        int dobro = numero * 2;
+        int triplo = numero * 3;
+
+        System.out.println("O dobro de " + numero + " é: " + dobro);
+        System.out.println("O triplo de " + numero + " é: " + triplo);
+
+        leitor.close();
+    }
+}
+
+//Leia pelo terminal a idade de uma pessoa e informe:
+
+// “Pode votar” se a idade for maior ou igual a 16;
+ //“Não pode votar” se a idade for menor que 16.
+
+import java.util.Scanner;
+
+public class projeto {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+
+        System.out.print("Digite a sua idade: ");
+        int idade = leitor.nextInt();
+
+        if (idade >= 16) {
+            System.out.println("Pode votar");
+        } else {
+            System.out.println("Não pode votar");
+        }
+
+        leitor.close();
+    }
+}
+
+//Crie um algoritmo que receba o valor unitário de um produto e a
+//quantidade comprada.
+//Calcule o valor total da compra.
+
+//Condição extra:
+//se o valor total da compra for maior que R$ 100,00, aplique
+//um desconto de 8% e mostre o valor final com desconto.
+
+import java.util.Scanner;
+
+public class projeto {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double valorUnitario = sc.nextDouble();
+        int qtd = sc.nextInt();
+        double total = valorUnitario * qtd;
+        if (total > 100.00) {
+            total = total * 0.92;
+        }
+        System.out.println(total);
+        sc.close();
+    }
+};
+
+//Crie um algoritmo que leia o preço de 1 litro de combustível e o valor
+//que uma pessoa possui para abastecer.
+//Calcule e mostre quantos litros ela conseguirá comprar.
+
+import java.util.Scanner;
+
+public class projeto {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double precoLitro = sc.nextDouble();
+        double valorDisponivel = sc.nextDouble();
+        double litros = valorDisponivel / precoLitro;
+        System.out.println(litros);
+        sc.close();
+    }
+}
+
+
+//O valor de um ingresso para cinema é de R$ 40,00.
+//Escreva um algoritmo que leia o tipo de ingresso desejado pelo
+//usuário:
+
+//I para ingresso inteiro;
+//M para meia-entrada.
+
+//Mostre o valor a ser pago.
+
+//Obs.: quem escolher meia-entrada paga 50% do valor normal.
+
+import java.util.Scanner;
+
+public class projeto{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double valorInteira = 40.00;
+        
+        System.out.print("Tipo de ingresso (I para inteira, M para meia): ");
+        char tipo = sc.next().toUpperCase().charAt(0);
+        
+        if (tipo == 'M') {
+            System.out.println("Valor a ser pago: R$ " + (valorInteira * 0.5));
+        } else {
+            System.out.println("Valor a ser pago: R$ " + valorInteira);
+        }
+        sc.close();
+    }
+}
+
+// exercicio 6 
+import java.util.Scanner;
+
+public class projeto {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Porcentagem da taxa de serviço: ");
+        double taxa = sc.nextDouble();
+        
+        
+        System.out.print("Valor unitário produto 1: ");
+        double valor1 = sc.nextDouble();
+        System.out.print("Quantidade produto 1: ");
+        int quant1 = sc.nextInt();
+        
+        
+        System.out.print("Valor unitário produto 2: ");
+        double valor2 = sc.nextDouble();
+        System.out.print("Quantidade produto 2: ");
+        int quant2 = sc.nextInt();
+        
+        
+        double total = (valor1 * quant1 + valor2 * quant2) * (taxa / 100 + 1);
+        
+        System.out.printf("Valor total com taxa: R$ %.2f%n", total);
+        sc.close();
+    }
+}
+
+
+
+
+    
+//Testei cada um no vscode separadamente  
+
+
+
+
+    
+
+
+
+
+
+    }
+
+
+
