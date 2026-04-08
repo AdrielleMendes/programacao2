@@ -1,0 +1,152 @@
+parte 1
+
+
+package aula06;
+
+import java.util.Scanner; 
+
+public class equais {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Digite o primeiro número: ");
+        int num1 = sc.nextInt();
+        
+        System.out.println("Digite o segundo número: ");
+        int num2 = sc.nextInt();
+        
+        if (num1 == num2) {
+            System.out.println("Os números são iguais.");
+        } else {
+            System.out.println("Os números são diferentes.");
+        }
+        
+        sc.close(); 
+    }
+}
+
+
+pratica 2
+
+package aula06;
+
+import java.util.Scanner;
+
+public class equais02{
+    public static void main(String[] args) {
+        try (Scanner sc = new Scanner(System.in)) {
+            
+            System.out.println("Digite a primeira palavra: ");
+            String t = sc.nextLine(); 
+            
+            System.out.println("Digite a segunda palavra: ");
+            String texto2 = sc.nextLine();
+            
+            
+            if (t.equalsIgnoreCase(texto2)) {
+                System.out.println("As palavras são iguais (mesmo que maiúsculas mudem).");
+            } else {
+                System.out.println("As palavras são diferentes.");
+            }
+        }
+    }
+}
+
+
+pratica 3
+
+
+package aula06;
+
+import java.util.Scanner;
+
+public class Contador {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite uma palavra: ");
+        String palavra = scanner.next(); 
+
+        
+        int tamanho = palavra.length();
+
+        System.out.println("A palavra possui " + tamanho + " caracteres.");
+
+        scanner.close();
+    }
+}
+
+
+
+parte 2
+public class a {
+    public static void main(String[] args) {
+        String palavra = "Programação";
+      
+        String parte1 = palavra.substring(0, 8);
+
+       
+        String parte2 = palavra.substring(7);
+
+        System.out.println("Parte 1: " + parte1);
+        System.out.println("Parte 2: " + parte2);
+    }
+}
+
+
+2 pratica 
+
+
+public class b {
+    public static void main(String[] args) {
+        String s = "Computação";
+
+        
+        char primeiro = s.charAt(0);
+        
+    
+        char terceiro = s.charAt(2);
+        
+        
+        char ultimo = s.charAt(s.length() - 1);
+
+        System.out.println("Palavra: " + s);
+        System.out.println("Primeiro: " + primeiro);
+        System.out.println("Terceiro: " + terceiro);
+        System.out.println("Último: " + ultimo);
+    }
+}
+
+
+
+
+pratica 3
+
+import java.util.Scanner; 
+
+public class Busca{
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+
+        
+        System.out.print("Digite uma frase: ");
+        String frase = leitor.nextLine();
+
+        
+        System.out.print("Digite a palavra que deseja encontrar: ");
+        String palavra = leitor.next();
+
+        
+        int posicao = frase.indexOf(palavra);
+
+        
+        if (posicao != -1) {
+            System.out.println("A palavra foi encontrada no índice: " + posicao);
+        } else {
+            System.out.println("Resultado: " + posicao + " (Palavra não encontrada)");
+        }
+
+        leitor.close(); 
+    }
+}
+
