@@ -1,0 +1,149 @@
+import java.util.Scanner;
+
+public class Votacao {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int idade = sc.nextInt();
+
+        if (idade >= 18 && idade <= 70) {
+            System.out.println("Obrigado a votar");
+        } else if ((idade >= 16) || (idade > 70)) {
+            System.out.println("Voto facultativo");
+        } else {
+            System.out.println("Não pode votar");
+        }
+    }
+}
+
+//caso2
+
+
+import java.util.Scanner;
+
+public class Nadador {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int idade = sc.nextInt();
+
+        if (idade >= 5 && idade <= 7) System.out.println("infantil A");
+        else if (idade >= 8 && idade <= 10) System.out.println("infantil B");
+        else if (idade >= 11 && idade <= 13) System.out.println("juvenil A");
+        else if (idade >= 14 && idade <= 17) System.out.println("juvenil B");
+        else if (idade >= 18) System.out.println("adulto");
+    }
+}
+
+
+caso 3
+
+
+
+import java.util.Scanner;
+
+public class Posto {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double litros = sc.nextDouble();
+        char tipo = sc.next().toUpperCase().charAt(0);
+        double preco = 0;
+
+        if (tipo == 'A') {
+            preco = (litros <= 20) ? litros * 4.50 * 0.97 : litros * 4.50 * 0.95;
+        } else if (tipo == 'G') {
+            preco = (litros <= 20) ? litros * 6.00 * 0.96 : litros * 6.00 * 0.94;
+        }
+        
+        System.out.printf("Valor: R$ %.2f%n", preco);
+    }
+}
+
+
+caso4
+
+public class Lancamento {
+    public static void main(String[] args) {
+        for (int i = 10; i >= 0; i--) {
+            System.out.println(i);
+        }
+        System.out.println("Lançar!");
+    }
+}
+
+
+caso5
+public class Media {
+    public static void main(String[] args) {
+        int[] notas = {7, 8, 6, 10, 9};
+        double soma = 0;
+        for (int n : notas) soma += n;
+        double media = soma / notas.length;
+
+        int cont = 0;
+        for (int n : notas) {
+            if (n > media) cont++;
+        }
+        System.out.println("Média: " + media);
+        System.out.println("Acima da média: " + cont);
+    }
+}
+
+
+caso 6
+public class FiltroNomes {
+    public static void main(String[] args) {
+        String[] nomes = {"Ana", "Bruno", "Alê", "Aline", "Clara"};
+        for (String nome : nomes) {
+            if (nome.startsWith("A")) {
+                System.out.println(nome);
+            }
+        }
+    }
+}
+
+
+caso7
+
+import java.util.Scanner;
+
+public class Inverter {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String palavra = sc.next();
+        String invertida = "";
+        for (int i = palavra.length() - 1; i >= 0; i--) {
+            invertida += palavra.charAt(i);
+        }
+        System.out.println(invertida);
+    }
+}
+
+caso 8
+import java.util.Scanner;
+
+public class Tabuada {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(num + " x " + i + " = " + (num * i));
+        }
+    }
+}
+
+
+caso9
+import java.util.Scanner;
+
+public class Senha {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String secreta = "1234";
+        String tentativa = "";
+
+        while (!tentativa.equals(secreta)) {
+            tentativa = sc.next();
+        }
+        System.out.println("Acesso permitido");
+    }
+}
+
