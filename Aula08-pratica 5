@@ -1,0 +1,121 @@
+import java.util.Scanner;
+
+public class pratica05 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        double a = teclado.nextDouble();
+        double b = teclado.nextDouble();
+        System.out.println(calcularHipotenusa(a, b));
+    }
+
+    public static double calcularHipotenusa(double a, double b) {
+        return Math.sqrt((a * a) + (b * b));
+    }
+}
+
+// EXERCICIO 2
+     
+//Crie um método que recebe um array de inteiros e retorna maior valor presente no Array
+import java.util.Scanner;
+
+public class pratica2 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int n = teclado.nextInt();
+        int[] v = new int[n];
+        for (int i = 0; i < n; i++) {
+            v[i] = teclado.nextInt();
+        }
+        System.out.println(maiorValor(v));
+    }
+
+    public static int maiorValor(int[] vetor) {
+        int maior = vetor[0];
+        for (int i = 1; i < vetor.length; i++) {
+            if (vetor[i] > maior) {
+                maior = vetor[i];
+            }
+        }
+        return maior;
+
+    }
+}
+
+
+//EXERCICIO 3 
+
+//Crie um método chamado elementoExiste que recebe 2 parâmetros: um array de strings
+//(String[]) e uma string de busca. O método deve retornar true se a string de busca
+//estiver presente no array e false caso contrário.
+
+
+
+
+
+import java.util.Scanner;
+
+public class Pratica3 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int n = teclado.nextInt();
+        String[] lista = new String[n];
+        for (int i = 0; i < n; i++) {
+            lista[i] = teclado.next();
+        }
+        String busca = teclado.next();
+        System.out.println(elementoExiste(lista, busca));
+        teclado.close();
+    }
+
+    public static boolean elementoExiste(String[] vetor, String busca) {
+        for (int i = 0; i < vetor.length; i++) {
+            if (vetor[i].equals(busca)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+
+
+//Exercicio 4
+
+//Crie um método chamado contarParesImpares que recebe um array de inteiros e
+//retorna um novo array de 2 posições, onde a primeira posição contém a quantidade de
+//números pares e a segunda, a quantidade de números ímpares.
+import java.util.Scanner;
+
+public class Pratica4 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        
+        int n = teclado.nextInt();
+        int[] v = new int[n];
+        
+        for (int i = 0; i < n; i++) {
+            v[i] = teclado.nextInt();
+        }
+        
+        int[] res = contarParesImpares(v);
+        
+        System.out.println(res[0]);
+        System.out.println(res[1]);
+        
+        teclado.close();
+    }
+
+    public static int[] contarParesImpares(int[] vetor) {
+        int pares = 0;
+        int impares = 0;
+        for (int i = 0; i < vetor.length; i++) {
+            if (vetor[i] % 2 == 0) {
+                pares++;
+            } else {
+                impares++;
+            }
+        }
+        int[] resultado = {pares, impares};
+        return resultado;
+    }
+}
