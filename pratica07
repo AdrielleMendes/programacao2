@@ -1,0 +1,43 @@
+public class Aluno {
+    // Atributos
+    String nome;
+    String matricula;
+    double nota1;
+    double nota2;
+    double notaTrabalho;
+
+    // Construtor
+    public Aluno(String nome, String matricula, double nota1, double nota2, double notaTrabalho) {
+        this.nome = nome;
+        this.matricula = matricula;
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+        this.notaTrabalho = notaTrabalho;
+    }
+
+    public double calcularMedia() {
+        return (nota1 + nota2 + notaTrabalho) / 3;
+    }
+
+    public void verificarSituacao() {
+        if (this.calcularMedia() >= 7.0) {
+            System.out.println("Aluno: " + nome + " - APROVADO");
+        } else {
+            System.out.println("Aluno: " + nome + " - REPROVADO");
+        }
+    }
+} 
+
+
+
+
+// class separada 
+public class TesteAluno {
+    public static void main(String[] args) {
+        Aluno aluno1 = new Aluno("Adrielle", "2026123", 8.5, 9.0, 7.5);
+        Aluno aluno2 = new Aluno("Mar", "2026456", 5.0, 6.0, 4.0);
+
+        aluno1.verificarSituacao();
+        aluno2.verificarSituacao();
+    }
+}
